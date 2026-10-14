@@ -1,3 +1,5 @@
+@import url("./content.css");
+
 :root {
   --ink: #f4f3ef;
   --muted: #a4a5ad;
@@ -221,33 +223,4 @@ h1 {
   font: 0.8rem "DM Mono", monospace;
 }
 
-.dispatch { padding: clamp(5rem, 12vw, 11rem) 12vw; background: var(--ground); }
-
-.dispatch h2 { margin-bottom: 2.5rem; font-size: clamp(3rem, 6vw, 6rem); }
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 2rem 5.5vw;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.68rem;
-}
-
-.notice {
-  position: fixed;
-  z-index: 3;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  width: min(370px, calc(100vw - 2.5rem));
-  padding: 1rem 1.15rem;
-  border: 1px solid color-mix(in srgb, var(--accent), transparent 45%);
-  border-radius: 12px;
-  background: #202128;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-  color: #dedee1;
-  font-size: 0.78rem;
-  line-height: 1.55;
-}
 

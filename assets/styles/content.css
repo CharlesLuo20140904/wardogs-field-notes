@@ -1,0 +1,108 @@
+.guide-proof {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--accent);
+  font: 0.62rem "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.1fr);
+  gap: clamp(2.5rem, 7vw, 8rem);
+  padding: clamp(5rem, 10vw, 10rem) 12vw;
+  background: #17181d;
+}
+
+.source-section h2 {
+  max-width: 10ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 0.96;
+}
+
+.source-section > div > p:last-child {
+  max-width: 41ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.source-list { border-top: 1px solid var(--line); }
+
+.source-list a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem 1.25rem;
+  padding: 1.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.source-list strong { font-size: 0.9rem; }
+
+.source-list span {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.source-list b {
+  color: var(--accent);
+  font: 0.65rem "DM Mono", monospace;
+  font-weight: 400;
+}
+
+.source-list a:hover strong, .source-list a:hover b { text-decoration: underline; }
+
+.source-card {
+  margin-top: 4rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 54%);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--accent), transparent 94%);
+}
+
+.source-card h2 {
+  max-width: 18ch;
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+
+.source-card > p:not(.eyebrow) {
+  max-width: 54ch;
+  margin-bottom: 1.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.source-card small {
+  display: block;
+  max-width: 64ch;
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font: 0.68rem / 1.6 "DM Mono", monospace;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 5.5vw;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+@media (max-width: 760px) {
+  .guide-proof { bottom: 1.6rem; left: 2rem; }
+  .source-section { grid-template-columns: 1fr; padding: 5.5rem 1.25rem; }
+  .source-list a { grid-template-columns: 1fr; gap: 0.65rem; }
+  .source-list span { grid-column: auto; }
+  .source-card { margin-top: 3rem; }
+}
