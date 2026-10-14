@@ -1,0 +1,89 @@
+.directory-shell { min-height: 100vh; }
+
+.directory-hero {
+  width: min(900px, calc(100% - 2.5rem));
+  padding: clamp(5rem, 12vw, 10rem) 0 5rem;
+  margin: 0 auto;
+}
+
+.directory-hero h1 {
+  max-width: 11ch;
+  margin-bottom: 1.7rem;
+  font-size: clamp(4rem, 9vw, 8.7rem);
+}
+
+.directory-hero > p:last-child {
+  max-width: 47ch;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(1180px, calc(100% - 2.5rem));
+  margin: 0 auto 7rem;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.directory-card {
+  position: relative;
+  display: flex;
+  min-height: 350px;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 2rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: center / cover var(--card-image), #24252b;
+}
+
+.directory-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 9, 12, 0.02), rgba(8, 9, 12, 0.91));
+  content: "";
+  transition: background 300ms ease;
+}
+
+.directory-card > * { position: relative; z-index: 1; }
+
+.directory-card .eyebrow { margin-bottom: auto; }
+
+.directory-card strong {
+  max-width: 11ch;
+  margin-bottom: 0.6rem;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.directory-card > span:not(.eyebrow):not(.directory-card-shade) {
+  max-width: 35ch;
+  color: #dedee0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.directory-card i {
+  margin-top: 1.6rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.directory-card:hover::after { background: linear-gradient(180deg, rgba(8, 9, 12, 0.08), rgba(8, 9, 12, 0.72)); }
+
+.directory-card:hover strong { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .directory-hero { padding-top: 5.5rem; }
+  .directory-grid { grid-template-columns: 1fr; margin-bottom: 4rem; }
+  .directory-card { min-height: 310px; }
+}

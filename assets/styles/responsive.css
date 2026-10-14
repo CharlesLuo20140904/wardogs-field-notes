@@ -1,0 +1,23 @@
+@media (max-width: 760px) {
+  .nav-shell { min-height: 66px; padding: 0 1.25rem; }
+  .menu-button { display: block; padding: 0; border: 0; color: var(--ink); background: transparent; font: 0.72rem "DM Mono", monospace; text-transform: uppercase; }
+  .site-nav { display: none; position: absolute; top: 66px; left: 0; right: 0; z-index: 2; flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 1.5rem 1.25rem; border-bottom: 1px solid var(--line); background: #16171c; }
+  .site-nav.is-open { display: flex; }
+  .hero { min-height: calc(100svh - 66px); }
+  .hero-content { width: auto; margin: 0 1.25rem 4.5rem; }
+  h1 { font-size: clamp(4rem, 20vw, 6.6rem); }
+  .hero-index { right: 1.25rem; bottom: 1.25rem; }
+  .guide-section { padding: 5rem 1.25rem; }
+  .section-heading, .method-section { grid-template-columns: 1fr; gap: 1.75rem; }
+  .section-heading { margin-bottom: 3rem; }
+  .guide-grid { grid-template-columns: 1fr; }
+  .guide-card, .guide-card:first-child { min-height: 235px; border-left: 1px solid var(--line); }
+  .guide-card strong { margin-top: 3.2rem; }
+  .method-section, .dispatch { padding: 5.5rem 1.25rem; }
+  .method-mark { display: none; }
+  footer { flex-direction: column; padding: 1.8rem 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

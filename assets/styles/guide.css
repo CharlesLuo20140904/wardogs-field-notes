@@ -1,0 +1,117 @@
+.article-nav { position: relative; z-index: 3; }
+
+.article-hero {
+  position: relative;
+  display: grid;
+  min-height: 640px;
+  overflow: hidden;
+  background: center / cover no-repeat var(--article-image), #1c1d22;
+}
+
+.article-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 11, 14, 0.93), rgba(10, 11, 14, 0.62) 55%, rgba(10, 11, 14, 0.12));
+}
+
+.article-headline {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  width: min(780px, 82vw);
+  margin: 0 0 7rem 12vw;
+}
+
+.article-kicker {
+  display: inline-block;
+  margin-bottom: 3.5rem;
+  color: var(--muted);
+  font: 0.7rem "DM Mono", monospace;
+  letter-spacing: 0.12em;
+}
+
+.article-kicker:hover { color: var(--accent); }
+
+.article-headline h1 {
+  max-width: 11ch;
+  margin: 0 0 1.4rem;
+  font-size: clamp(4rem, 8vw, 7.4rem);
+  line-height: 0.88;
+}
+
+.article-headline > p:not(.eyebrow) {
+  max-width: 48ch;
+  margin-bottom: 1.2rem;
+  color: #dbdadd;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.article-headline > span { color: var(--muted); font: 0.68rem "DM Mono", monospace; }
+
+.article-body { width: min(900px, 88vw); margin: 0 auto; padding: clamp(5.5rem, 10vw, 9rem) 0; }
+
+.article-intro {
+  max-width: 58ch;
+  margin: 0 0 5rem;
+  color: #d7d6d9;
+  font: 500 clamp(1.25rem, 2vw, 1.65rem) / 1.55 Newsreader, Georgia, serif;
+}
+
+.article-sections { border-top: 1px solid var(--line); }
+
+.article-sections section {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-sections section > span { padding-top: 0.3rem; color: var(--accent); font: 0.7rem "DM Mono", monospace; }
+
+.article-sections h2, .takeaway h2, .related h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 0.95; }
+
+.article-sections p { max-width: 58ch; margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.8; }
+
+.takeaway { margin-top: 5rem; padding: clamp(2rem, 5vw, 4rem); border: 1px solid color-mix(in srgb, var(--accent), transparent 58%); border-radius: 18px; background: color-mix(in srgb, var(--accent), transparent 93%); }
+
+.takeaway h2 { max-width: 12ch; }
+
+.takeaway ol { display: grid; gap: 1rem; margin: 2rem 0 0; padding-left: 1.4rem; color: #d7d6d9; line-height: 1.6; }
+
+.takeaway li::marker { color: var(--accent); font-family: "DM Mono", monospace; }
+
+.related { padding: clamp(5rem, 9vw, 8rem) 12vw; background: #17181d; }
+
+.related h2 { max-width: 12ch; margin-bottom: 3.5rem; }
+
+.related > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+
+.related a { position: relative; min-height: 190px; padding: 1.75rem 2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background 180ms ease; }
+
+.related a:first-child { border-left: 1px solid var(--line); }
+
+.related a:hover { background: color-mix(in srgb, var(--accent), transparent 92%); }
+
+.related a span { display: block; color: var(--muted); font: 0.68rem "DM Mono", monospace; }
+
+.related a strong { display: block; max-width: 11ch; margin-top: 3rem; font: 500 2rem / 0.95 Newsreader, Georgia, serif; }
+
+.related a b { position: absolute; right: 2rem; bottom: 1.6rem; color: var(--accent); font-size: 1.3rem; font-weight: 400; }
+
+.missing { display: grid; min-height: 80vh; align-content: center; padding: 5.5vw; }
+
+.missing h1 { max-width: 9ch; font-size: clamp(3.5rem, 8vw, 7rem); }
+
+@media (max-width: 760px) {
+  .article-hero { min-height: calc(100svh - 66px); }
+  .article-headline { width: auto; margin: 0 1.25rem 4.5rem; }
+  .article-kicker { margin-bottom: 2.5rem; }
+  .article-body { width: auto; margin: 0 1.25rem; }
+  .article-sections section { grid-template-columns: 1fr; gap: 1rem; padding: 2.4rem 0; }
+  .article-sections section > span { padding: 0; }
+  .related { padding: 5.5rem 1.25rem; }
+  .related > div { grid-template-columns: 1fr; }
+  .related a:first-child { border-left: 0; }
+}
