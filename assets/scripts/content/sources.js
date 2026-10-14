@@ -3,7 +3,19 @@ export const sources = {
     gameId: "aion-2",
     label: "NCSOFT · AION2 core-content overview",
     url: "https://about.ncsoft.com/en/news/article/aion2-update-250530-2",
-    detail: "Classes, manual combat, exploration and dungeon formats.",
+    detail: "Original eight class roles, manual combat, exploration and early dungeon formats.",
+  },
+  "aion-chapter-1": {
+    gameId: "aion-2",
+    label: "NCSOFT · AION 2 Chapter 1 update",
+    url: "https://about.ncsoft.com/en/news/article/aion2_update_260706",
+    detail: "Level-50 cap, Brawler, expanded party sizes and new dungeon entry requirements.",
+  },
+  "aion-chaos": {
+    gameId: "aion-2",
+    label: "NCSOFT · Chaos Abyss class update",
+    url: "https://about.ncsoft.com/en/news/article/aion2_update_260325",
+    detail: "Class adjustments, new Stigma skills, PvP/PvE separation and Chaos Abyss scope.",
   },
   "deadlock-status": {
     gameId: "deadlock",
@@ -15,7 +27,7 @@ export const sources = {
     gameId: "deadlock",
     label: "Deadlock · City Never Sleeps",
     url: "https://www.playdeadlock.com/cityneversleeps",
-    detail: "Official lane and district callouts.",
+    detail: "Official map update, new heroes, HUD and live-client change context.",
   },
   "arc-hub": {
     gameId: "arc-raiders",
@@ -27,7 +39,7 @@ export const sources = {
     gameId: "arc-raiders",
     label: "Embark Help Center · Your first raid",
     url: "https://id.embark.games/arc-raiders/support/faq/135-your-first-raid-1759328782",
-    detail: "Extraction, Safe Pocket, Free Loadouts and Topside risk.",
+    detail: "Extraction, Safe Pocket, Free Loadouts, stealth and Topside risk.",
   },
   "wardogs-core": {
     gameId: "wardogs",
@@ -57,7 +69,7 @@ export const sources = {
     gameId: "valheim",
     label: "Iron Gate · Valheim news",
     url: "https://valheim.com/news/",
-    detail: "Official patch history and Public Test branch information.",
+    detail: "Official patch history, 1.0 news and Public Test branch information.",
   },
 };
 

@@ -2,8 +2,8 @@ export const games = [
   {
     id: "aion-2", name: "AION 2", eyebrow: "AETHER / VERIFIED GUIDE", accent: "#77b9ff", glow: "#2f69d9", image: "aion-2.png",
     tagline: "Classes, dungeons and flight—kept close to official facts.",
-    intro: "A source-linked starter library for AION 2's eight classes, dungeon formats and vertical exploration.",
-    focus: "Eight class roles · manual combat · dungeon formats", status: "3 verified guides",
+    intro: "A source-linked library for the current class, dungeon-entry and PvP system decisions.",
+    focus: "Chapter 1 dungeons · class roles · Chaos Abyss", status: "3 verified guides",
   },
   {
     id: "deadlock", name: "DEADLOCK", eyebrow: "CITY / CURRENT-CLIENT NOTES", accent: "#f1aa62", glow: "#944f29", image: "deadlock.png",

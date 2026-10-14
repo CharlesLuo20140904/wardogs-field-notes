@@ -1,0 +1,6 @@
+body.theme-aion { --paper: #0c1322; --panel: #131d31; --panel-soft: #192642; --ink: #f2f7ff; --muted: #b1c4df; --line: rgba(197, 222, 255, 0.2); --accent: #80beff; }
+body.theme-deadlock { --paper: #111614; --panel: #171e1c; --panel-soft: #202a27; --ink: #edf0e9; --muted: #a9b5ac; --line: rgba(226, 238, 224, 0.16); --accent: #d5df9e; --display: Manrope, Arial, sans-serif; }
+body.theme-arc { --paper: #1c1a16; --panel: #27231d; --panel-soft: #322c23; --ink: #f3eddf; --muted: #c4baa5; --line: rgba(243, 237, 223, 0.16); --accent: #dfc685; }
+body.theme-wardogs { --paper: #201719; --panel: #2b2021; --panel-soft: #392a2b; --ink: #fff6e9; --muted: #d0b9b1; --line: rgba(255, 246, 233, 0.17); --accent: #f48272; --display: Manrope, Arial, sans-serif; }
+body.theme-spire { --paper: #211a2b; --panel: #2d233b; --panel-soft: #382c49; --ink: #f5edff; --muted: #c7b8d8; --line: rgba(245, 237, 255, 0.18); --accent: #d7adff; }
+body.theme-valheim { --paper: #12201d; --panel: #172b27; --panel-soft: #1f3833; --ink: #f0f4e9; --muted: #b8c8bc; --line: rgba(240, 244, 233, 0.17); --accent: #a9d7b2; }

@@ -1,108 +1,18 @@
-.guide-proof {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  color: var(--accent);
-  font: 0.62rem "DM Mono", monospace;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.source-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.1fr);
-  gap: clamp(2.5rem, 7vw, 8rem);
-  padding: clamp(5rem, 10vw, 10rem) 12vw;
-  background: #17181d;
-}
-
-.source-section h2 {
-  max-width: 10ch;
-  margin: 0 0 1.5rem;
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  line-height: 0.96;
-}
-
-.source-section > div > p:last-child {
-  max-width: 41ch;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-.source-list { border-top: 1px solid var(--line); }
-
-.source-list a {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.75rem 1.25rem;
-  padding: 1.45rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.source-list strong { font-size: 0.9rem; }
-
-.source-list span {
-  grid-column: 1 / -1;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.55;
-}
-
-.source-list b {
-  color: var(--accent);
-  font: 0.65rem "DM Mono", monospace;
-  font-weight: 400;
-}
-
-.source-list a:hover strong, .source-list a:hover b { text-decoration: underline; }
-
-.source-card {
-  margin-top: 4rem;
-  padding: clamp(2rem, 5vw, 3.5rem);
-  border: 1px solid color-mix(in srgb, var(--accent), transparent 54%);
-  border-radius: 18px;
-  background: color-mix(in srgb, var(--accent), transparent 94%);
-}
-
-.source-card h2 {
-  max-width: 18ch;
-  margin: 0 0 1rem;
-  font-size: clamp(1.7rem, 3vw, 2.6rem);
-  line-height: 1;
-}
-
-.source-card > p:not(.eyebrow) {
-  max-width: 54ch;
-  margin-bottom: 1.8rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.source-card small {
-  display: block;
-  max-width: 64ch;
-  margin-top: 1.4rem;
-  color: var(--muted);
-  font: 0.68rem / 1.6 "DM Mono", monospace;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 2rem 5.5vw;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.68rem;
-}
-
-@media (max-width: 760px) {
-  .guide-proof { bottom: 1.6rem; left: 2rem; }
-  .source-section { grid-template-columns: 1fr; padding: 5.5rem 1.25rem; }
-  .source-list a { grid-template-columns: 1fr; gap: 0.65rem; }
-  .source-list span { grid-column: auto; }
-  .source-card { margin-top: 3rem; }
-}
+.game-home { overflow: hidden; }
+.game-home > section, .game-home > aside { width: min(1160px, calc(100% - 3rem)); margin-left: auto; margin-right: auto; }
+.game-home h1 { margin-bottom: 1.4rem; font-size: clamp(3.8rem, 8.7vw, 8.8rem); font-weight: 500; letter-spacing: -0.07em; line-height: 0.84; }
+.game-home h1 em { color: var(--accent); font-style: italic; }
+.game-home h2 { margin: 0; font: 500 clamp(2.2rem, 4.2vw, 4.2rem)/0.95 var(--display); letter-spacing: -0.055em; }
+.game-home p { color: var(--muted); font-size: 0.94rem; line-height: 1.75; }
+.home-guides, .match-desk, .raid-board, .operations, .run-ledger, .expedition-atlas { padding-top: 8rem; padding-bottom: 7rem; }
+.home-guides > header, .match-desk > header, .raid-board > header, .operations > header, .run-ledger > header, .expedition-atlas > header { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 2rem; margin-bottom: 3.25rem; }
+.guide-card { position: relative; display: flex; min-height: 255px; flex-direction: column; padding: 1.6rem; border: 1px solid var(--line); background: var(--panel); transition: border-color 180ms ease, transform 180ms ease, background 180ms ease; }
+.guide-card:hover { border-color: var(--accent); background: var(--panel-soft); transform: translateY(-3px); }
+.guide-order, .guide-type, .guide-meta { color: var(--muted); font: 0.64rem var(--mono); letter-spacing: 0.07em; text-transform: uppercase; }
+.guide-order { color: var(--accent); }
+.guide-type { margin: 1rem 0 auto; }
+.guide-card h3 { max-width: 16ch; margin: 0.55rem 0 0.8rem; font: 500 clamp(1.55rem, 2.5vw, 2.25rem)/0.95 var(--display); letter-spacing: -0.045em; }
+.guide-card p { margin-bottom: 1.2rem; font-size: 0.76rem; line-height: 1.6; }
+.guide-card i { position: absolute; right: 1.45rem; bottom: 1.15rem; color: var(--accent); font-style: normal; }
+.evidence-strip { width: min(1160px, calc(100% - 3rem)) !important; padding: 1.25rem 0 3.5rem; border-top: 1px solid var(--line); color: var(--muted); font: 0.68rem/1.7 var(--mono) !important; letter-spacing: 0.03em; text-transform: uppercase; }
+.evidence-strip b { color: var(--accent); }

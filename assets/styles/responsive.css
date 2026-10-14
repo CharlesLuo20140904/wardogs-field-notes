@@ -1,21 +1,64 @@
 @media (max-width: 760px) {
-  .nav-shell { min-height: 66px; padding: 0 1.25rem; }
-  .menu-button { display: block; padding: 0; border: 0; color: var(--ink); background: transparent; font: 0.72rem "DM Mono", monospace; text-transform: uppercase; }
-  .site-nav { display: none; position: absolute; top: 66px; left: 0; right: 0; z-index: 2; flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 1.5rem 1.25rem; border-bottom: 1px solid var(--line); background: #16171c; }
+  .site-header { min-height: 66px; padding: 0 1.25rem; }
+  .menu-button { display: block; }
+  .site-nav { position: absolute; top: 65px; left: 0; display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 1.4rem 1.25rem; border-bottom: 1px solid var(--line); background: var(--paper); }
   .site-nav.is-open { display: flex; }
-  .hero { min-height: calc(100svh - 66px); }
-  .hero-content { width: auto; margin: 0 1.25rem 4.5rem; }
-  h1 { font-size: clamp(4rem, 20vw, 6.6rem); }
-  .hero-index { right: 1.25rem; bottom: 1.25rem; }
-  .guide-section { padding: 5rem 1.25rem; }
-  .section-heading, .method-section { grid-template-columns: 1fr; gap: 1.75rem; }
-  .section-heading { margin-bottom: 3rem; }
-  .guide-grid { grid-template-columns: 1fr; }
-  .guide-card, .guide-card:first-child { min-height: 235px; border-left: 1px solid var(--line); }
-  .guide-card strong { margin-top: 3.2rem; }
-  .method-section, .dispatch { padding: 5.5rem 1.25rem; }
-  .method-mark { display: none; }
-  footer { flex-direction: column; padding: 1.8rem 1.25rem; }
+  .site-footer { flex-direction: column; gap: 0.7rem; padding: 1.6rem 1.25rem; }
+  .source-roster { grid-template-columns: 1fr; gap: 2rem; width: min(100% - 2.5rem, 560px); padding: 4rem 0; }
+  .directory-hero, .directory-grid { width: min(100% - 2.5rem, 560px); }
+  .directory-hero { padding-top: 6rem; }
+  .directory-grid { grid-template-columns: 1fr; }
+  .directory-card, .directory-card:nth-child(2n), .directory-card:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .directory-card:last-child { border-bottom: 0; }
+
+  .game-home > section, .game-home > aside { width: min(100% - 2.5rem, 560px); }
+  .game-home h1 { font-size: clamp(3.9rem, 16vw, 5.5rem); }
+  .home-guides, .match-desk, .raid-board, .operations, .run-ledger, .expedition-atlas { padding-top: 4.8rem; padding-bottom: 4.8rem; }
+  .home-guides > header, .match-desk > header, .raid-board > header, .operations > header, .run-ledger > header, .expedition-atlas > header { grid-template-columns: 1fr; margin-bottom: 2.3rem; }
+  .guide-card { min-height: 235px; }
+  .aion-hero, .deadlock-hero, .arc-hero, .wardogs-hero, .valheim-hero { min-height: auto; padding: 5rem 0; }
+  .aion-orbit, .arc-grid { opacity: 0.45; }
+  .aion-orbit { top: 5rem; right: -11rem; width: 24rem; }
+  .aion-hero aside { margin-left: 0; }
+  .aion-console, .deadlock-hero, .wardogs-hero, .valheim-hero { grid-template-columns: 1fr; gap: 2.5rem; }
+  .aion-console { padding: 2rem; }
+  .aion-guide-list, .deadlock-guide-grid, .arc-guide-stack, .wardogs-guide-grid, .spire-guide-stack, .valheim-guide-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .aion-guide-list .guide-card + .guide-card, .war-principles div + div { border-left: 1px solid var(--line); }
+  .deadlock-topbar { display: none; }
+  .deadlock-hero aside { justify-self: stretch; }
+  .deadlock-guide-grid .guide-card:nth-child(2), .deadlock-guide-grid .guide-card:nth-child(3), .valheim-guide-grid .guide-card:nth-child(2), .spire-guide-stack .guide-card:nth-child(2) { margin-top: 0; }
+  .patch-signal, .arc-warning, .return-note { grid-template-columns: 1fr; gap: 1rem; }
+  .arc-hero dl { gap: 1.25rem; margin-top: 4rem; }
+  .raid-board { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .war-banner { padding: 0.7rem 1.25rem; }
+  .zone-diagram { justify-self: start; width: 250px; }
+  .war-principles { grid-template-columns: 1fr; }
+  .war-principles div + div { border-top: 0; }
+  .spire-hero { min-height: auto; padding: 5.5rem 0 4rem; }
+  .spire-title h1 { font-size: clamp(5rem, 24vw, 8rem); }
+  .run-rail { flex-wrap: wrap; gap: 0.8rem; justify-content: flex-start; }
+  .biome-compass { grid-template-columns: 1fr auto; }
+  .biome-compass p { grid-column: 1 / -1; grid-row: 2; }
+
+  .article-shell { width: min(100% - 2.5rem, 560px); }
+  .article-lead { padding: 4.5rem 0 3rem; }
+  .article-lead h1 { font-size: clamp(3.2rem, 15vw, 5.2rem); }
+  .article-lead dl { grid-template-columns: 1fr; gap: 1rem; }
+  .guide-step { grid-template-columns: 2rem 1fr; gap: 1rem; padding: 2rem 0; }
+  .article-related, .evidence-panel { width: min(100% - 2.5rem, 560px); }
+  .article-related > div { grid-template-columns: 1fr; }
+  .article-related a + a { margin-left: 0; }
+  .article-aion .article-layout, .article-deadlock .match-review { grid-template-columns: 1fr; gap: 1.5rem; }
+  .article-aion .article-margin { padding-top: 0; }
+  .article-deadlock .deadlock-article-top, .article-deadlock .match-review, .article-wardogs .wardogs-article-top { width: min(100% - 2.5rem, 560px); }
+  .article-arc .arc-article-top .article-lead { padding-left: 0; }
+  .raid-protocol, .operation-order, .run-page, .saga-page { width: min(100% - 2.5rem, 560px); }
+  .operation-grid, .operation-order footer { grid-template-columns: 1fr; gap: 1rem; }
+  .run-page { padding: 1.5rem; box-shadow: 0.5rem 0.5rem 0 var(--panel-soft); }
+  .article-valheim .valheim-article-top { padding-left: 0; }
+  .saga-steps { grid-template-columns: 1fr; }
+  .saga-steps .guide-step { min-height: 0; }
+  .saga-steps .guide-step > span { margin-bottom: 2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
